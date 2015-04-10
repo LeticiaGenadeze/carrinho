@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Main{
+	public static void main(String args[]){
+		Scanner s= new Scanner(System.in);
+		Carrinho c =new Carrinho(4);
+		Produto a =new Produto();
+		Produto b =new Produto();
+		Produto d =new Produto();
+		Produto e =new Produto();
+		double distancia;
+		a.peso=s.nextDouble();
+		a.preco=s.nextDouble();
+		a.nome=s.nextLine();
+		s.nextLine();
+		b.peso=s.nextDouble();
+		b.preco=s.nextDouble();
+		b.nome=s.nextLine();
+		s.nextLine();
+		d.peso=s.nextDouble();
+		d.preco=s.nextDouble();
+		d.nome=s.nextLine();
+		s.nextLine();
+		e.peso=s.nextDouble();
+		e.preco=s.nextDouble();
+		e.nome=s.nextLine();
+		s.nextLine();
+		c.add(a);
+		c.add(b);
+		c.add(d);
+		c.add(e);
+		distancia=s.nextDouble();
+		double frete;
+		double preco;
+		double peso;
+		preco=c.getcustotot();
+		peso=c.getpesotot();
+		frete=2.0*distancia;
+		System.out.println(" Custo total:"+preco);
+		System.out.println(" Peso total:"+peso);
+		System.out.println(" Frete:"+frete);
+	}
+};
